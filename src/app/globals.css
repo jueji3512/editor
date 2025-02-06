@@ -1,10 +1,9 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 html,
 body {
-  height: 100%;
-}
-
-.tiptap {
-  outline: none;
+  padding: 100px;
+  @apply h-full bg-white dark:bg-black dark:text-white;
 }
