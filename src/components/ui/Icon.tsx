@@ -1,5 +1,6 @@
 import { icons } from 'lucide-react';
 import { memo } from 'react';
+import { cn } from '@/lib/utils';
 
 export type IconProps = {
   name: keyof typeof icons;
@@ -9,7 +10,7 @@ export type IconProps = {
 
 export const Icon = memo(({ name, className, strokeWidth }: IconProps) => {
   const IconComponent = icons[name];
-  const classNames = ['w-4 h-4', className].filter(Boolean).join(' ');
+  const classNames = cn('w-4 h-4', className);
   if (!IconComponent) {
     return null;
   }
