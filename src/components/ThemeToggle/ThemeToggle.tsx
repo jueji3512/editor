@@ -1,7 +1,7 @@
 'use client';
-import { Toggle } from '@/components/ui/Toggle/Toggle';
 import { Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { Toggle } from '@/components/ui/Toggle';
 
 type Theme = 'light' | 'dark';
 

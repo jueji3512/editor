@@ -4,6 +4,7 @@ export default {
     'import-notation': 'string',
     'at-rule-no-deprecated': null,
     'at-rule-empty-line-before': null,
+    'rule-empty-line-before': 'never-multi-line',
     'selector-class-pattern': null,
     'at-rule-no-unknown': [
       true,

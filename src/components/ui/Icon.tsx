@@ -23,3 +23,4 @@ export const Icon = memo(({ name, className, strokeWidth }: IconProps) => {
 });
 
 Icon.displayName = 'Icon';
+export type IconType = keyof typeof icons;

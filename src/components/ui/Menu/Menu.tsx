@@ -6,8 +6,9 @@ export type MenuProps = HTMLProps<HTMLDivElement> & {
   direction?: 'horizontal' | 'vertical';
 };
 
-export function MenuWrapper({ children, className, direction = 'vertical', ...props }: MenuProps) {
+export function Menu({ children, className, direction = 'vertical', ...props }: MenuProps) {
   const menuClasses = cn('flex p-1 gap-0.5', direction === 'vertical' ? 'flex-col' : 'flex-row', className);
+
   return (
     <Surface
       className={menuClasses}
@@ -16,7 +17,6 @@ export function MenuWrapper({ children, className, direction = 'vertical', ...pr
     </Surface>
   );
 }
-MenuWrapper.displayName = 'Menu';
 
 export type MenuItemProps = HTMLProps<HTMLDivElement> & {
   active?: boolean;
@@ -25,7 +25,7 @@ export type MenuItemProps = HTMLProps<HTMLDivElement> & {
 
 export function MenuItem({ children, className, active, onClick, ...props }: MenuItemProps) {
   const menuItemClasses = cn(
-    'px-2 py-1 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-sm cursor-pointer',
+    'p-2 py-1 bg-white dark:bg-black hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-sm cursor-pointer',
     active ? 'bg-neutral-100 dark:bg-neutral-800' : '',
     className,
   );
@@ -38,9 +38,22 @@ export function MenuItem({ children, className, active, onClick, ...props }: Men
     </div>
   );
 }
-MenuItem.displayName = 'MenuItem';
 
-export const Menu = {
-  Wrapper: MenuWrapper,
-  Item: MenuItem,
+export type MenuTitleProps = HTMLProps<HTMLDivElement> & {
+  title: string;
 };
+
+export function MenuTitle({ children, className, ...props }: MenuTitleProps) {
+  const menuTitleClasses = cn('mb-1 text-xs', className);
+  return (
+    <div
+      className={menuTitleClasses}
+      {...props}>
+      {children}
+    </div>
+  );
+}
+
+Menu.Wrapper = Menu;
+Menu.Item = MenuItem;
+Menu.Title = MenuTitle;
