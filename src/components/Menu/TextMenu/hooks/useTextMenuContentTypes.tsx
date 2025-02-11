@@ -11,7 +11,11 @@ export function useTextMenuContentTypes(editor: Editor) {
         id: 'body-text',
         type: 'option',
         disabled: () => false,
-        isActive: () => ctx.editor.isActive('paragraph'),
+        isActive: () =>
+          ctx.editor.isActive('paragraph') &&
+          !ctx.editor.isActive('orderedList') &&
+          !ctx.editor.isActive('bulletList') &&
+          !ctx.editor.isActive('taskList'),
         onClick: () => ctx.editor.chain().focus().setParagraph().run(),
       },
       {
@@ -67,6 +71,33 @@ export function useTextMenuContentTypes(editor: Editor) {
         disabled: () => false,
         isActive: () => ctx.editor.isActive('heading', { level: 6 }),
         onClick: () => ctx.editor.chain().focus().setHeading({ level: 6 }).run(),
+      },
+      {
+        icon: 'ListOrdered',
+        label: 'Ordered List',
+        id: 'ordered-list',
+        type: 'option',
+        disabled: () => false,
+        isActive: () => ctx.editor.isActive('orderedList'),
+        onClick: () => ctx.editor.chain().focus().toggleOrderedList().run(),
+      },
+      {
+        icon: 'List',
+        label: 'Unordered List',
+        id: 'unordered-list',
+        type: 'option',
+        disabled: () => false,
+        isActive: () => ctx.editor.isActive('bulletList'),
+        onClick: () => ctx.editor.chain().focus().toggleBulletList().run(),
+      },
+      {
+        icon: 'ListTodo',
+        label: 'Task List',
+        id: 'task-list',
+        type: 'option',
+        disabled: () => false,
+        isActive: () => ctx.editor.isActive('taskList'),
+        onClick: () => ctx.editor.chain().focus().toggleTaskList().run(),
       },
     ],
   });

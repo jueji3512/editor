@@ -27,6 +27,16 @@
   h6 {
     @apply text-base;
   }
+  ul,
+  ol {
+    @apply my-2;
+  }
+  ul {
+    @apply list-disc px-8;
+  }
+  ol {
+    @apply list-decimal px-8;
+  }
 }
 html,
 body {

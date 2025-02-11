@@ -52,7 +52,7 @@ export function ContentTypePicker({ options }: { options: ContentTypePickerOptio
           {options.map((option) => (
             <Menu.Item
               key={option.id}
-              className="flex items-center gap-4"
+              className="flex justify-between items-center gap-4"
               active={option.isActive()}
               onClick={option.onClick}>
               <Icon

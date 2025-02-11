@@ -1,3 +1,22 @@
+@reference 'tailwindcss';
 .ProseMirror {
   @apply w-full h-full outline-0;
+  ul[data-type='taskList'] {
+    @apply list-none p-0;
+    li {
+      @apply flex;
+      & > div {
+        @apply flex-auto;
+      }
+      & > label {
+        @apply grow-0 shrink-0 flex-auto mt-0.5 mr-2 select-none;
+        & > input {
+          @apply cursor-pointer;
+        }
+      }
+      &[data-checked='true'] {
+        @apply line-through;
+      }
+    }
+  }
 }
