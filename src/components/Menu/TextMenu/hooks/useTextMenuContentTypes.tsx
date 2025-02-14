@@ -99,6 +99,15 @@ export function useTextMenuContentTypes(editor: Editor) {
         isActive: () => ctx.editor.isActive('taskList'),
         onClick: () => ctx.editor.chain().focus().toggleTaskList().run(),
       },
+      {
+        icon: 'Braces',
+        label: 'Code Block',
+        id: 'code-block',
+        type: 'option',
+        disabled: () => false,
+        isActive: () => ctx.editor.isActive('codeBlock'),
+        onClick: () => ctx.editor.chain().focus().toggleCodeBlock().run(),
+      },
     ],
   });
 }
