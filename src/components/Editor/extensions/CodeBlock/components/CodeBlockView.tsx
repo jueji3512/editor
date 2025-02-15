@@ -32,7 +32,9 @@ export const CodeBlockViewToolbar = ({ node, className, updateAttributes }: Code
     }
   }, [node]);
   return (
-    <div className={cn('absolute flex justify-between w-full px-2 pt-2 gap-2', className)}>
+    <div
+      contentEditable={false}
+      className={cn('absolute flex justify-between w-full px-2 pt-2 gap-2 select-none', className)}>
       <Select
         options={languages.current.map((language) => ({
           label: language,

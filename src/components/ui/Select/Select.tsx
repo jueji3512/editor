@@ -100,7 +100,7 @@ export type SelectItemProps = SelectOption;
 
 const SelectItem = ({ value, label, disabled }: SelectItemProps) => {
   const itemClasses = cn(
-    'px-2 py-1 text-sm',
+    'px-2 py-1 text-sm outline-none',
     disabled ? 'cursor-not-allowed' : 'cursor-pointer hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-sm',
   );
   return (
