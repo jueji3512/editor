@@ -1,4 +1,5 @@
 @import 'tailwindcss';
 @import './globals.css';
+@import './animation.css';
 @import './editor.css';
 @import './code.css';

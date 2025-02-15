@@ -9,7 +9,7 @@ export type SurfaceProps = HTMLProps<HTMLDivElement> & {
 export function Surface({ className, children, shadow = true, border = true, ...props }: SurfaceProps) {
   const surfaceClasses = cn(
     className,
-    'bg-white dark:bg-black rounded-lg overflow-hidden',
+    'bg-white dark:bg-black rounded-lg overflow-hidden outline-none',
     shadow ? 'shadow-sm' : '',
     border ? 'border border-neutral-200 dark:border-neutral-800' : '',
   );

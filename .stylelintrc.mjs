@@ -9,7 +9,7 @@ export default {
     'at-rule-no-unknown': [
       true,
       {
-        ignoreAtRules: ['custom-variant', 'apply', 'variants', 'screen', 'reference'],
+        ignoreAtRules: ['custom-variant', 'apply', 'variants', 'screen', 'reference', 'theme'],
       },
     ],
   },
