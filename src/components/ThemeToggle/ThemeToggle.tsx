@@ -1,17 +1,20 @@
 'use client';
-import { Sun } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { Toggle } from '@/components/ui/Toggle';
+import { cn } from '@/lib/utils';
+import { Icon } from '../ui/Icon';
 
 type Theme = 'light' | 'dark';
 
-export function ThemeToggle() {
+export function ThemeToggle({ className }: { className?: string }) {
   const [theme, setTheme] = useState<Theme>('light');
   useEffect(() => {
     const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme as Theme);
     document.documentElement.classList.toggle('dark', savedTheme === 'dark');
   }, []);
+
+  const toggleClasses = cn('rounded-full', className);
 
   const toggleTheme = () => {
     const newTheme = theme === 'dark' ? 'light' : 'dark';
@@ -22,9 +25,9 @@ export function ThemeToggle() {
 
   return (
     <Toggle
-      circle
+      className={toggleClasses}
       onChange={toggleTheme}>
-      <Sun />
+      <Icon name={theme === 'dark' ? 'Moon' : 'Sun'} />
     </Toggle>
   );
 }

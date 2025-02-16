@@ -1,11 +1,6 @@
-import Editor from '@/components/Editor/Editor';
-import { ThemeToggle } from '@/components/ThemeToggle/ThemeToggle';
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <div>
-      <ThemeToggle />
-      <Editor />
-    </div>
-  );
+export default function Page() {
+  redirect('/editor');
+  return <></>;
 }

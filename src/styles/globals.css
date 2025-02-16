@@ -39,6 +39,5 @@
 }
 html,
 body {
-  padding: 100px !important;
-  @apply h-full bg-white dark:bg-black dark:text-white;
+  @apply h-full dark:text-white;
 }

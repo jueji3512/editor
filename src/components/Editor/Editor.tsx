@@ -12,9 +12,12 @@ const Editor = () => {
   });
 
   return (
-    <div>
+    <div className="col-start-2 col-end-2 flex flex-col">
       {editor && <TextMenu editor={editor} />}
-      <EditorContent editor={editor} />
+      <EditorContent
+        editor={editor}
+        className="flex-1"
+      />
     </div>
   );
 };
