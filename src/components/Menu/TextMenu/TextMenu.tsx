@@ -1,7 +1,9 @@
 import { Editor, BubbleMenu } from '@tiptap/react';
+
+import { Icon } from '@/components/ui/Icon';
 import { Surface } from '@/components/ui/Surface';
 import { Toggle } from '@/components/ui/Toggle';
-import { Icon } from '@/components/ui/Icon';
+
 import { ContentTypePicker } from './components/ContentTypePicker';
 import { useTextmenuCommands } from './hooks/useTextMenuCommands';
 import { useTextMenuContentTypes } from './hooks/useTextMenuContentTypes';

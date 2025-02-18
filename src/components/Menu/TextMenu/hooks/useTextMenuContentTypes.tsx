@@ -1,4 +1,5 @@
 import { Editor, useEditorState } from '@tiptap/react';
+
 import { ContentTypePickerOption } from '@/components/Menu/TextMenu/components/ContentTypePicker';
 
 export function useTextMenuContentTypes(editor: Editor) {

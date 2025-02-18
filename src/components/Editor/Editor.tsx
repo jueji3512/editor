@@ -1,8 +1,10 @@
 'use client';
 
 import { useEditor, EditorContent } from '@tiptap/react';
-import ExtensionKit from './extensions';
+
 import TextMenu from '@/components/Menu/TextMenu/TextMenu';
+
+import ExtensionKit from './extensions';
 
 const Editor = () => {
   const editor = useEditor({

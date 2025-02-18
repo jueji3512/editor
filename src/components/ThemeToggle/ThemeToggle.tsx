@@ -1,7 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
+
 import { Toggle } from '@/components/ui/Toggle';
 import { cn } from '@/lib/utils';
+
 import { Icon } from '../ui/Icon';
 
 type Theme = 'light' | 'dark';

@@ -1,14 +1,18 @@
 'use client';
+
 import { ReactElement, useCallback, useRef } from 'react';
+
 import { NodeViewWrapper, NodeViewContent } from '@tiptap/react';
 import type { NodeViewProps } from '@tiptap/react';
-import { Select } from '@/components/ui/Select';
-import { cn } from '@/lib/utils';
-import { lowlight } from '../CodeBlock';
-import { useHover } from '@/hooks/useHover';
+import type { Node } from 'prosemirror-model';
+
 import { Button } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
-import type { Node } from 'prosemirror-model';
+import { Select } from '@/components/ui/Select';
+import { useHover } from '@/hooks/useHover';
+import { cn } from '@/lib/utils';
+
+import { lowlight } from '../CodeBlock';
 
 export type CodeBlockViewToolbarProps = {
   node: Node;

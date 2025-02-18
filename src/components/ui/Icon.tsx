@@ -1,5 +1,7 @@
-import { icons } from 'lucide-react';
 import { memo } from 'react';
+
+import { icons } from 'lucide-react';
+
 import { cn } from '@/lib/utils';
 
 export type IconProps = {

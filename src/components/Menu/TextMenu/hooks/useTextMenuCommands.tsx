@@ -1,4 +1,5 @@
 import { useCallback } from 'react';
+
 import { Editor } from '@tiptap/react';
 
 export const useTextmenuCommands = (editor: Editor) => {

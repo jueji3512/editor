@@ -1,5 +1,5 @@
-import { Surface } from '@/components/ui/Surface';
 import { Button } from '@/components/ui/Button';
+import { Surface } from '@/components/ui/Surface';
 
 export const ColorPanel = ({ children }: { children: React.ReactNode }) => {
   return (

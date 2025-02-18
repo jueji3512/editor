@@ -1,4 +1,5 @@
 import { cn } from '@/lib/utils';
+
 import { SidebarProvider } from './components/Sidebar/Sidebar';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {

@@ -1,8 +1,10 @@
 'use client';
+
 import { createContext, useState, useContext, useCallback } from 'react';
-import { cn } from '@/lib/utils';
+
 import { Button, ButtonProps } from '@/components/ui/Button';
 import { Icon } from '@/components/ui/Icon';
+import { cn } from '@/lib/utils';
 
 export type SidebarProps = {
   children: React.ReactNode;

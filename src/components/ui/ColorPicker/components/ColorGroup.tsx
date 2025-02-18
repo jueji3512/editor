@@ -1,9 +1,11 @@
 'use client';
+import { useMemo } from 'react';
+
 import { Icon } from '@/components/ui/Icon';
 import { cn } from '@/lib/utils';
-import { getContrastColorOKLCH } from '../utils';
+
 import { colors } from '../constant';
-import { useMemo } from 'react';
+import { getContrastColorOKLCH } from '../utils';
 
 type ColorValue = { l: number; c: number; h: number } | null;
 type Color = {

@@ -1,6 +1,8 @@
 import { Root, Portal, Overlay, Content, Title, Description } from '@radix-ui/react-dialog';
-import { Surface } from '../Surface';
+
 import { cn } from '@/lib/utils';
+
+import { Surface } from '../Surface';
 
 export type DialogProps = {
   open: boolean;

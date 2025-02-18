@@ -1,4 +1,5 @@
 import * as ScrollArea from '@radix-ui/react-scroll-area';
+
 import { cn } from '@/lib/utils';
 export const Scrollbar = ({ children }: { children: React.ReactNode }) => {
   const scrollAreaClasses = cn('flex-1');

@@ -1,6 +1,6 @@
+import { useCallback , HTMLProps } from 'react';
+
 import { cn } from '@/lib/utils';
-import { useCallback } from 'react';
-import { HTMLProps } from 'react';
 export type ToggleProps = HTMLProps<HTMLButtonElement> & {
   active?: boolean;
   children: React.ReactNode | string;

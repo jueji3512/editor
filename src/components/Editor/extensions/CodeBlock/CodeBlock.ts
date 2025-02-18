@@ -1,8 +1,10 @@
 import { CodeBlockLowlight } from '@tiptap/extension-code-block-lowlight';
-import { ReactNodeViewRenderer } from '@tiptap/react';
 import type { CodeBlockLowlightOptions } from '@tiptap/extension-code-block-lowlight';
-import { CodeBlockView } from './components/CodeBlockView';
+import { ReactNodeViewRenderer } from '@tiptap/react';
 import { common, createLowlight } from 'lowlight';
+
+import { CodeBlockView } from './components/CodeBlockView';
+
 
 const lowlight = createLowlight(common);
 

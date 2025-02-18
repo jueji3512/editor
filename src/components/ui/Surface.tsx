@@ -1,5 +1,6 @@
-import { cn } from '@/lib/utils';
 import { HTMLProps } from 'react';
+
+import { cn } from '@/lib/utils';
 
 export type SurfaceProps = HTMLProps<HTMLDivElement> & {
   shadow?: boolean;

@@ -1,9 +1,13 @@
-import * as SelectPrimitive from '@radix-ui/react-select';
-import { cn } from '@/lib/utils';
-import { Icon } from '@/components/ui/Icon';
-import { Surface } from '../Surface';
-import { Scrollbar } from '@/components/ui/Scrollbar';
 import { useMemo, useState, useEffect } from 'react';
+
+import * as SelectPrimitive from '@radix-ui/react-select';
+
+import { Icon } from '@/components/ui/Icon';
+import { Scrollbar } from '@/components/ui/Scrollbar';
+import { cn } from '@/lib/utils';
+
+import { Surface } from '../Surface';
+
 
 export type SelectProps = {
   options: SelectOption[];
