@@ -1,0 +1,11 @@
+@utility text-theme {
+  @apply text-neutral-900 dark:text-neutral-200;
+}
+
+@utility text-theme-lighten {
+  @apply text-neutral-500 dark:text-neutral-400;
+}
+
+@utility bg-theme {
+  @apply bg-white dark:bg-neutral-900;
+}

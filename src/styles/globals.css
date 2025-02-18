@@ -39,5 +39,5 @@
 }
 html,
 body {
-  @apply h-full dark:text-white;
+  @apply h-full text-theme bg-theme;
 }

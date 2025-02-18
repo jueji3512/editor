@@ -1,12 +1,12 @@
 import { cn } from '@/lib/utils';
 
 const MainRoot = ({ children }: { children: React.ReactNode }) => {
-  const mainClasses = cn('flex-1 bg-white dark:bg-neutral-900');
+  const mainClasses = cn('flex-1');
   return <div className={mainClasses}>{children}</div>;
 };
 
 const MainContent = ({ children }: { children: React.ReactNode }) => {
-  const mainClasses = cn('flex-1 bg-white dark:bg-neutral-900');
+  const mainClasses = cn('flex-1');
   return <div className={mainClasses}>{children}</div>;
 };
 
