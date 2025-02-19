@@ -7,9 +7,9 @@ import { cn } from '@/lib/utils';
 import { colors } from '../constant';
 import { getContrastColorOKLCH } from '../utils';
 
-type ColorValue = { l: number; c: number; h: number } | null;
+export type ColorValue = { l: number; c: number; h: number } | null;
 type Color = {
-  key: number;
+  id: number;
   label: string;
   value: ColorValue;
 };
@@ -17,17 +17,17 @@ type Colors = Color[];
 
 export type ColorGroupProps = {
   title: string;
-  activeItem: number;
-  onClick?: (color: Color) => void;
+  activeId: number;
+  onClick?: (value: ColorValue) => void;
 };
 
-export const ColorGroup = ({ title, activeItem, onClick }: ColorGroupProps) => {
+export const ColorGroup = ({ title, activeId, onClick }: ColorGroupProps) => {
   return (
     <div className="flex flex-col gap-2">
       <ColorGroupTitle title={title} />
       <ColorGroupGrid
         colors={colors}
-        activeItem={activeItem}
+        activeId={activeId}
         onClick={onClick}
       />
     </div>
@@ -45,20 +45,20 @@ const ColorGroupTitle = ({ title, className }: ColorGroupTitleProps) => {
 
 export type ColorGroupGridProps = {
   colors: Colors;
-  activeItem: number;
-  onClick?: (color: Color) => void;
+  activeId: number;
+  onClick?: (value: ColorValue) => void;
 };
 
-const ColorGroupGrid = ({ colors, activeItem, onClick }: ColorGroupGridProps) => {
+const ColorGroupGrid = ({ colors, activeId, onClick }: ColorGroupGridProps) => {
   return (
     <div className="flex">
       <div className="inline-grid grid-cols-8 gap-1">
         {colors.map((color) => (
           <ColorGroupItem
-            key={color.key}
+            key={color.id}
             color={color.value}
-            isActive={activeItem === color.key}
-            onClick={() => onClick?.(color)}
+            isActive={activeId === color.id}
+            onClick={onClick}
           />
         ))}
       </div>
@@ -69,7 +69,7 @@ const ColorGroupGrid = ({ colors, activeItem, onClick }: ColorGroupGridProps) =>
 export type ColorGroupItemProps = {
   color: ColorValue;
   isActive: boolean;
-  onClick?: () => void;
+  onClick?: (value: ColorValue) => void;
 };
 
 const ColorGroupItem = ({ color, isActive, onClick }: ColorGroupItemProps) => {
@@ -83,13 +83,10 @@ const ColorGroupItem = ({ color, isActive, onClick }: ColorGroupItemProps) => {
   }, [color]);
   const iconClasses = cn('w-4 h-4', contrastColor === 'black' ? 'text-black' : 'text-white');
 
-  const handleClick = () => {
-    onClick?.();
-  };
   return (
-    <span
+    <div
       className={itemClasses}
-      onClick={handleClick}>
+      onClick={() => onClick?.(color)}>
       <span
         className={colorClasses}
         style={{ backgroundColor: color ? `oklch(${color.l} ${color.c} ${color.h})` : '' }}>
@@ -106,7 +103,7 @@ const ColorGroupItem = ({ color, isActive, onClick }: ColorGroupItemProps) => {
           />
         )}
       </span>
-    </span>
+    </div>
   );
 };
 

@@ -4,10 +4,11 @@ import { Icon } from '@/components/ui/Icon';
 import { Surface } from '@/components/ui/Surface';
 import { Toggle } from '@/components/ui/Toggle';
 
+import { ColorPicker } from './components/ColorPicker';
 import { ContentTypePicker } from './components/ContentTypePicker';
+import { useTextMenuColors } from './hooks/useTextMenuColors';
 import { useTextmenuCommands } from './hooks/useTextMenuCommands';
 import { useTextMenuContentTypes } from './hooks/useTextMenuContentTypes';
-
 function Wrapper({ children }: { children: React.ReactNode }) {
   return <Surface className="flex items-center gap-0.5 p-1">{children}</Surface>;
 }
@@ -15,6 +16,7 @@ function Wrapper({ children }: { children: React.ReactNode }) {
 export default function TextMenu({ editor }: { editor: Editor }) {
   const { onBold, onItalic, onUnderline, onStrike } = useTextmenuCommands(editor);
   const options = useTextMenuContentTypes(editor);
+  const colorOptions = useTextMenuColors(editor);
   return (
     <>
       {editor && (
@@ -43,6 +45,7 @@ export default function TextMenu({ editor }: { editor: Editor }) {
               onChange={onStrike}>
               <Icon name="Strikethrough" />
             </Toggle>
+            <ColorPicker options={colorOptions} />
           </Wrapper>
         </BubbleMenu>
       )}

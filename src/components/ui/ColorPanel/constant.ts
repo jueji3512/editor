@@ -1,0 +1,18 @@
+export const colors = [
+  { id: 1, label: '默认', value: null },
+  { id: 2, label: '红色', value: { l: 0.55, c: 0.15, h: 29 } },
+  { id: 3, label: '橙色', value: { l: 0.7, c: 0.13, h: 55 } },
+  { id: 4, label: '黄色', value: { l: 0.95, c: 0.12, h: 90 } },
+  { id: 5, label: '绿色', value: { l: 0.65, c: 0.14, h: 140 } },
+  { id: 6, label: '青色', value: { l: 0.8, c: 0.1, h: 190 } },
+  { id: 7, label: '蓝色', value: { l: 0.4, c: 0.12, h: 265 } },
+  { id: 8, label: '紫色', value: { l: 0.5, c: 0.15, h: 310 } },
+  { id: 9, label: '浅灰', value: { l: 0.75, c: 0, h: 0 } },
+  { id: 10, label: '浅红', value: { l: 0.75, c: 0.12, h: 25 } },
+  { id: 11, label: '浅橙', value: { l: 0.85, c: 0.1, h: 55 } },
+  { id: 12, label: '浅黄', value: { l: 0.97, c: 0.08, h: 90 } },
+  { id: 13, label: '浅绿', value: { l: 0.8, c: 0.1, h: 140 } },
+  { id: 14, label: '浅青', value: { l: 0.9, c: 0.07, h: 190 } },
+  { id: 15, label: '浅蓝', value: { l: 0.7, c: 0.09, h: 255 } },
+  { id: 16, label: '浅紫', value: { l: 0.75, c: 0.11, h: 305 } },
+];

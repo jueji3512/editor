@@ -1,9 +1,15 @@
+import { HTMLProps } from 'react';
+
 import { Button } from '@/components/ui/Button';
 import { Surface } from '@/components/ui/Surface';
 
-export const ColorPanel = ({ children }: { children: React.ReactNode }) => {
+type ColorPanelProps = HTMLProps<HTMLDivElement>;
+
+export const ColorPanel = ({ children, ...props }: ColorPanelProps) => {
   return (
-    <div className="flex">
+    <div
+      className="flex"
+      {...props}>
       <Surface className="flex flex-col gap-3 p-2">{children}</Surface>
     </div>
   );
