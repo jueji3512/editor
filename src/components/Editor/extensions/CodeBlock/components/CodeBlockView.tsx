@@ -64,7 +64,7 @@ export const CodeBlockView = ({ node, updateAttributes }: NodeViewProps): ReactE
     isHovered ? 'opacity-100' : 'opacity-0',
   );
   const preClasses = cn(
-    'px-4 pt-[34px] pb-[22px] border border-neutral-200 rounded-lg bg-stone-100 text-black dark:border-neutral-700 dark:bg-neutral-800 dark:text-white selection:bg-blue-200 dark:selection:bg-cyan-900',
+    'px-4 pt-8 pb-[22px] border border-neutral-200 rounded-lg bg-stone-100 text-black dark:border-neutral-700 dark:bg-neutral-800 dark:text-white selection:bg-blue-200 dark:selection:bg-cyan-900',
     `language-${node.attrs.language}`,
   );
   return (

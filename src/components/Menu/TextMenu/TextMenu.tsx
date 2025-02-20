@@ -14,7 +14,7 @@ function Wrapper({ children }: { children: React.ReactNode }) {
 }
 
 export default function TextMenu({ editor }: { editor: Editor }) {
-  const { onBold, onItalic, onUnderline, onStrike } = useTextmenuCommands(editor);
+  const commands = useTextmenuCommands(editor);
   const options = useTextMenuContentTypes(editor);
   const colorOptions = useTextMenuColors(editor);
   return (
@@ -27,23 +27,28 @@ export default function TextMenu({ editor }: { editor: Editor }) {
             <ContentTypePicker options={options} />
             <Toggle
               active={editor.isActive('bold')}
-              onChange={onBold}>
+              onChange={commands.onBold}>
               <Icon name="Bold" />
             </Toggle>
             <Toggle
               active={editor.isActive('italic')}
-              onChange={onItalic}>
+              onChange={commands.onItalic}>
               <Icon name="Italic" />
             </Toggle>
             <Toggle
               active={editor.isActive('underline')}
-              onChange={onUnderline}>
+              onChange={commands.onUnderline}>
               <Icon name="Underline" />
             </Toggle>
             <Toggle
               active={editor.isActive('strike')}
-              onChange={onStrike}>
+              onChange={commands.onStrike}>
               <Icon name="Strikethrough" />
+            </Toggle>
+            <Toggle
+              active={editor.isActive('code')}
+              onChange={commands.onCode}>
+              <Icon name="CodeXml" />
             </Toggle>
             <ColorPicker options={colorOptions} />
           </Wrapper>

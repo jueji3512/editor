@@ -1,7 +1,7 @@
 .ProseMirror {
   pre {
     code {
-      @apply bg-inherit;
+      @apply p-0 bg-inherit;
       .hljs-comment,
       .hljs-quote {
         color: #5c6370;

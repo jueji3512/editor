@@ -21,4 +21,7 @@
   mark {
     @apply text-inherit;
   }
+  code {
+    @apply px-1 py-0.5 bg-gray-200 text-[85%] rounded-sm;
+  }
 }

@@ -7,5 +7,6 @@ export const useTextmenuCommands = (editor: Editor) => {
   const onItalic = useCallback(() => editor.chain().focus().toggleItalic().run(), [editor]);
   const onUnderline = useCallback(() => editor.chain().focus().toggleUnderline().run(), [editor]);
   const onStrike = useCallback(() => editor.chain().focus().toggleStrike().run(), [editor]);
-  return { onBold, onItalic, onUnderline, onStrike };
+  const onCode = useCallback(() => editor.chain().focus().toggleCode().run(), [editor]);
+  return { onBold, onItalic, onUnderline, onStrike, onCode };
 };
