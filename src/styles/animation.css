@@ -1,5 +1,6 @@
 @theme {
-  --animation-show-dialog: showdialog 0.3s ease;
+  --animate-show-dialog: showdialog 0.3s ease;
+  --animate-slide-in: slidein 0.3s ease;
 
   @keyframes showdialog {
     from {
@@ -9,6 +10,16 @@
     to {
       opacity: 1;
       transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  @keyframes slidein {
+    from {
+      opacity: 0;
+      transform: translateY(-120%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
     }
   }
 }

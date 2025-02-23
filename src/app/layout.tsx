@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
-// import { Geist, Geist_Mono } from 'next/font/google';
 
+// import { Geist, Geist_Mono } from 'next/font/google';
+import { MessageProvider } from '@/components/ui/Message/MessageContext';
 import '@/styles/index.css';
 
 // const geistSans = Geist({
@@ -25,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>{children}</body>
+      <body className={`antialiased`}>
+        <MessageProvider>{children}</MessageProvider>
+      </body>
     </html>
   );
 }
