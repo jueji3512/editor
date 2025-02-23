@@ -1,4 +1,4 @@
-import { useCallback , HTMLProps } from 'react';
+import { useCallback, HTMLProps } from 'react';
 
 import { cn } from '@/lib/utils';
 export type ToggleProps = HTMLProps<HTMLButtonElement> & {
@@ -26,7 +26,8 @@ export const Toggle = ({ active, children, onChange, className }: ToggleProps) =
       className={buttonClass}
       type="button"
       onClick={handleChange}
-      aria-pressed={active}>
+      aria-pressed={active}
+    >
       {children}
     </button>
   );

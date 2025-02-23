@@ -36,12 +36,14 @@ export const Dropdown = ({
     <DropdownMenu.Root
       modal={false}
       open={isHovered}
-      onOpenChange={setIsHovered}>
+      onOpenChange={setIsHovered}
+    >
       <DropdownMenu.Trigger asChild>
         <Button
           className="gap-1 outline-none"
           onMouseOver={handleHover}
-          onMouseLeave={handleUnhover}>
+          onMouseLeave={handleUnhover}
+        >
           <Icon name={activeItem?.icon as IconType} />
           <Icon
             name="ChevronDown"
@@ -54,19 +56,22 @@ export const Dropdown = ({
         align="start"
         alignOffset={-4}
         loop
-        asChild>
+        asChild
+      >
         <Surface
-          className="flex flex-col p-1 gap-0.5"
+          className="flex flex-col gap-0.5 p-1"
           onMouseOver={handleHover}
-          onMouseLeave={handleUnhover}>
+          onMouseLeave={handleUnhover}
+        >
           {options.map((option) => (
             <DropdownMenu.Item
               key={option.id}
               className={dropdownItemClasses(activeItem?.id === option.id)}
-              onClick={option.onClick}>
+              onClick={option.onClick}
+            >
               <Icon
                 name={option.icon}
-                className="w-4.5 h-4.5"
+                className="h-4.5 w-4.5"
               />
               <span className="text-xs">{option.label}</span>
             </DropdownMenu.Item>

@@ -63,7 +63,8 @@ const SidebarTrigger = ({ iconClassName, ...props }: SidebarTriggerProps) => {
   return (
     <Button
       {...props}
-      onClick={() => setIsCollapsed(!isCollapsed)}>
+      onClick={() => setIsCollapsed(!isCollapsed)}
+    >
       <Icon
         name={isCollapsed ? 'PanelLeftOpen' : 'PanelLeftClose'}
         className={iconClassName}

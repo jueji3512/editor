@@ -14,7 +14,8 @@ export function Menu({ children, className, direction = 'vertical', ...props }: 
   return (
     <Surface
       className={menuClasses}
-      {...props}>
+      {...props}
+    >
       {children}
     </Surface>
   );
@@ -35,7 +36,8 @@ export function MenuItem({ children, className, active, onClick, ...props }: Men
     <div
       className={menuItemClasses}
       onClick={onClick}
-      {...props}>
+      {...props}
+    >
       {children}
     </div>
   );
@@ -50,7 +52,8 @@ export function MenuTitle({ children, className, ...props }: MenuTitleProps) {
   return (
     <div
       className={menuTitleClasses}
-      {...props}>
+      {...props}
+    >
       {children}
     </div>
   );

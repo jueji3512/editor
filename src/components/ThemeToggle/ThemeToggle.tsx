@@ -28,7 +28,8 @@ export function ThemeToggle({ className }: { className?: string }) {
   return (
     <Toggle
       className={toggleClasses}
-      onChange={toggleTheme}>
+      onChange={toggleTheme}
+    >
       <Icon name={theme === 'dark' ? 'Moon' : 'Sun'} />
     </Toggle>
   );

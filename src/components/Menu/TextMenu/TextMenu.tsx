@@ -22,32 +22,38 @@ export default function TextMenu({ editor }: { editor: Editor }) {
       {editor && (
         <BubbleMenu
           editor={editor}
-          tippyOptions={{ placement: 'top-start' }}>
+          tippyOptions={{ placement: 'top-start' }}
+        >
           <Wrapper>
             <ContentTypePicker options={options} />
             <Toggle
               active={editor.isActive('bold')}
-              onChange={commands.onBold}>
+              onChange={commands.onBold}
+            >
               <Icon name="Bold" />
             </Toggle>
             <Toggle
               active={editor.isActive('italic')}
-              onChange={commands.onItalic}>
+              onChange={commands.onItalic}
+            >
               <Icon name="Italic" />
             </Toggle>
             <Toggle
               active={editor.isActive('underline')}
-              onChange={commands.onUnderline}>
+              onChange={commands.onUnderline}
+            >
               <Icon name="Underline" />
             </Toggle>
             <Toggle
               active={editor.isActive('strike')}
-              onChange={commands.onStrike}>
+              onChange={commands.onStrike}
+            >
               <Icon name="Strikethrough" />
             </Toggle>
             <Toggle
               active={editor.isActive('code')}
-              onChange={commands.onCode}>
+              onChange={commands.onCode}
+            >
               <Icon name="CodeXml" />
             </Toggle>
             <ColorPicker options={colorOptions} />

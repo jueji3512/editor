@@ -14,16 +14,19 @@ export const Scrollbar = ({ children }: { children: React.ReactNode }) => {
   return (
     <ScrollArea.Root
       className={scrollAreaClasses}
-      scrollHideDelay={500}>
-      <ScrollArea.Viewport className="w-full h-full">{children}</ScrollArea.Viewport>
+      scrollHideDelay={500}
+    >
+      <ScrollArea.Viewport className="h-full w-full">{children}</ScrollArea.Viewport>
       <ScrollArea.Scrollbar
         orientation="vertical"
-        className={scrollbarVerticalClasses}>
+        className={scrollbarVerticalClasses}
+      >
         <ScrollArea.Thumb className={scrollbarThumbBeforeClasses} />
       </ScrollArea.Scrollbar>
       <ScrollArea.Scrollbar
         orientation="horizontal"
-        className={scrollbarHorizontalClasses}>
+        className={scrollbarHorizontalClasses}
+      >
         <ScrollArea.Thumb className={scrollbarThumbClasses} />
       </ScrollArea.Scrollbar>
     </ScrollArea.Root>

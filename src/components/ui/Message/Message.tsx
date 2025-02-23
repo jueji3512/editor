@@ -33,7 +33,7 @@ const messageIcons: MessageItemIconType = {
 export const MessageContainer = () => {
   const { messages, removeMessage } = useContext(MessageContext);
   return createPortal(
-    <div className="fixed top-4 left-1/2 -translate-x-1/2 z-[1000] overflow-hidden">
+    <div className="fixed top-4 left-1/2 z-[1000] -translate-x-1/2 overflow-hidden">
       <TransitionGroup>
         {messages.map((msg) => (
           <CSSTransition
@@ -49,7 +49,8 @@ export const MessageContainer = () => {
             onExiting={() => {
               const height = msg.ref.current.getBoundingClientRect().height;
               msg.ref.current.style.marginTop = -height + 'px';
-            }}>
+            }}
+          >
             <MessageItem
               ref={msg.ref}
               id={msg.id}
@@ -85,7 +86,8 @@ export const MessageItem = ({ id, type, content, duration = 3000, onRemove, ref 
   return (
     <div
       ref={ref}
-      className="pb-2">
+      className="pb-2"
+    >
       <div className={messageClasses}>
         <Icon
           name={messageIcons[type].name}

@@ -23,7 +23,8 @@ const ColorPanelContent = ({ options, handleHover, handleUnhover }: ColorContent
     <ColorPanel
       onPointerDown={(e) => e.preventDefault()}
       onMouseOver={handleHover}
-      onMouseLeave={handleUnhover}>
+      onMouseLeave={handleUnhover}
+    >
       <ColorGroup
         title="文字颜色"
         activeId={textColorId}
@@ -55,10 +56,12 @@ export const ColorPicker = ({ options }: ColorPickerProps) => {
           handleUnhover={handleUnhover}
           options={options}
         />
-      }>
+      }
+    >
       <Button
         onMouseOver={handleHover}
-        onMouseLeave={handleUnhover}>
+        onMouseLeave={handleUnhover}
+      >
         <Icon name="Highlighter" />
         <Icon
           name="ChevronDown"

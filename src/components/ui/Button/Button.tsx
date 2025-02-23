@@ -28,7 +28,8 @@ export const Button = ({ children, className, onClick, ref, circle, border, ...p
       className={buttonClass}
       onClick={handleClick}
       ref={ref}
-      {...props}>
+      {...props}
+    >
       {children}
     </button>
   );

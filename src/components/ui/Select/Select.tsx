@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 
 import { Surface } from '../Surface';
 
-
 export type SelectProps = {
   options: SelectOption[];
   disabled?: boolean;
@@ -51,14 +50,15 @@ export const Select = ({ options, disabled, className, value, modal = false, onC
     <SelectPrimitive.Root
       open={open}
       onOpenChange={setOpen}
-      onValueChange={onChange}>
+      onValueChange={onChange}
+    >
       <SelectPrimitive.Trigger className={selectClasses}>
         {options.find((option) => option.value === value)?.label ||
           options.find((option) => option.value === value)?.value ||
           ''}
         <Icon
           name="ChevronsUpDown"
-          className="w-4 h-4"
+          className="h-4 w-4"
         />
       </SelectPrimitive.Trigger>
       <SelectPortal
@@ -81,7 +81,8 @@ const SelectPortal = ({ width, options }: SelectPortalProps) => {
     <SelectPrimitive.Portal>
       <SelectPrimitive.Content
         position="popper"
-        sideOffset={4}>
+        sideOffset={4}
+      >
         <Surface className={surfaceClasses}>
           <Scrollbar>
             <SelectPrimitive.Viewport>
@@ -111,7 +112,8 @@ const SelectItem = ({ value, label, disabled }: SelectItemProps) => {
     <SelectPrimitive.Item
       className={itemClasses}
       value={value}
-      disabled={disabled}>
+      disabled={disabled}
+    >
       {label || value}
     </SelectPrimitive.Item>
   );

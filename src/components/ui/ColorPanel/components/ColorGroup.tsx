@@ -40,7 +40,7 @@ export type ColorGroupTitleProps = {
 };
 
 const ColorGroupTitle = ({ title, className }: ColorGroupTitleProps) => {
-  return <div className={cn('text-xs text-theme', className)}>{title}</div>;
+  return <div className={cn('text-theme text-xs', className)}>{title}</div>;
 };
 
 export type ColorGroupGridProps = {
@@ -86,10 +86,12 @@ const ColorGroupItem = ({ color, isActive, onClick }: ColorGroupItemProps) => {
   return (
     <div
       className={itemClasses}
-      onClick={() => onClick?.(color)}>
+      onClick={() => onClick?.(color)}
+    >
       <span
         className={colorClasses}
-        style={{ backgroundColor: color ? `oklch(${color.l} ${color.c} ${color.h})` : '' }}>
+        style={{ backgroundColor: color ? `oklch(${color.l} ${color.c} ${color.h})` : '' }}
+      >
         {color && isActive && (
           <Icon
             name="Check"
@@ -99,7 +101,7 @@ const ColorGroupItem = ({ color, isActive, onClick }: ColorGroupItemProps) => {
         {!color && (
           <Icon
             name="Slash"
-            className="w-4 h-4 text-theme"
+            className="text-theme h-4 w-4"
           />
         )}
       </span>

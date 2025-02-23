@@ -33,7 +33,8 @@ export const Dialog = ({
   return (
     <Root
       open={open}
-      onOpenChange={onOpenChange}>
+      onOpenChange={onOpenChange}
+    >
       <Portal>
         {overlay && <Overlay className={overlayClasses} />}
         <Content asChild>

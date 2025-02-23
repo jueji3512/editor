@@ -14,7 +14,8 @@ export const Popover = ({
   return (
     <Root
       open={open}
-      onOpenChange={onOpenChange}>
+      onOpenChange={onOpenChange}
+    >
       <Trigger asChild>{children}</Trigger>
       <Portal>
         <Content
@@ -23,7 +24,8 @@ export const Popover = ({
           onCloseAutoFocus={(e) => e.preventDefault()}
           onInteractOutside={(e) => e.preventDefault()}
           onPointerDownOutside={(e) => e.preventDefault()}
-          onFocusOutside={(e) => e.preventDefault()}>
+          onFocusOutside={(e) => e.preventDefault()}
+        >
           {content}
         </Content>
       </Portal>

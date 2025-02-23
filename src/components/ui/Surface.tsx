@@ -17,7 +17,8 @@ export function Surface({ className, children, shadow = true, border = true, ...
   return (
     <div
       className={surfaceClasses}
-      {...props}>
+      {...props}
+    >
       {children}
     </div>
   );

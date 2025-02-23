@@ -1,5 +1,4 @@
-import { Extension , Editor } from '@tiptap/react';
-
+import { Extension, Editor } from '@tiptap/react';
 
 export const KeyboardShortcuts = Extension.create({
   name: 'keyboardShortcuts',

@@ -9,7 +9,8 @@ export const ColorPanel = ({ children, ...props }: ColorPanelProps) => {
   return (
     <div
       className="flex"
-      {...props}>
+      {...props}
+    >
       <Surface className="flex flex-col gap-3 p-2">{children}</Surface>
     </div>
   );
@@ -17,7 +18,7 @@ export const ColorPanel = ({ children, ...props }: ColorPanelProps) => {
 
 const ColorPanelButton = ({ children }: { children: React.ReactNode }) => {
   return (
-    <Button className="flex items-center justify-center text-xs bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700">
+    <Button className="flex items-center justify-center bg-neutral-100 text-xs hover:bg-neutral-200 dark:bg-neutral-800 dark:hover:bg-neutral-700">
       {children}
     </Button>
   );

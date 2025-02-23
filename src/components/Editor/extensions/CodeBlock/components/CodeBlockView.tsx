@@ -38,19 +38,21 @@ export const CodeBlockViewToolbar = ({ node, className, updateAttributes }: Code
   return (
     <div
       contentEditable={false}
-      className={cn('absolute flex justify-between w-full px-2 pt-2 gap-2 select-none', className)}>
+      className={cn('absolute flex w-full justify-between gap-2 px-2 pt-2 select-none', className)}
+    >
       <Select
         options={languages.current.map((language) => ({
           label: language,
           value: language,
         }))}
         value={language}
-        className="gap-1 w-auto h-5 pl-2 pr-1 text-xs rounded-md"
+        className="h-5 w-auto gap-1 rounded-md pr-1 pl-2 text-xs"
         onChange={handleLanguageChange}
       />
       <Button
         border
-        onClick={handleCopy}>
+        onClick={handleCopy}
+      >
         <Icon name="Copy" />
       </Button>
     </div>
@@ -69,9 +71,10 @@ export const CodeBlockView = ({ node, updateAttributes }: NodeViewProps): ReactE
   );
   return (
     <NodeViewWrapper
-      className="relative group"
+      className="group relative"
       onMouseEnter={handleHover}
-      onMouseLeave={handleUnhover}>
+      onMouseLeave={handleUnhover}
+    >
       <CodeBlockViewToolbar
         node={node}
         className={toolbarClasses}

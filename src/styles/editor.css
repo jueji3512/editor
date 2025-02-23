@@ -1,5 +1,5 @@
 .ProseMirror {
-  @apply w-full h-full outline-0;
+  @apply h-full w-full outline-0;
   ul[data-type='taskList'] {
     @apply list-none p-0;
     li {
@@ -8,7 +8,7 @@
         @apply flex-auto;
       }
       & > label {
-        @apply grow-0 shrink-0 flex-auto mt-0.5 mr-2 select-none;
+        @apply mt-0.5 mr-2 flex-auto shrink-0 grow-0 select-none;
         & > input {
           @apply cursor-pointer;
         }
@@ -22,6 +22,6 @@
     @apply text-inherit;
   }
   code {
-    @apply px-1 py-0.5 bg-gray-200 text-[85%] rounded-sm;
+    @apply rounded-sm bg-gray-200 px-1 py-0.5 text-[85%];
   }
 }
